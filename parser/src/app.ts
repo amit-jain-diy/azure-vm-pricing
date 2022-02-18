@@ -122,6 +122,10 @@ function timeEvent(eventName: string): void {
     await selectRegion(page, config.region);
     timeEvent('regionSelectionCompletedAt');
 
+    timeEvent('priceSelectionStartedAt');
+    await selectmonthly(page, 'month');
+    timeEvent('priceSelectionCompletedAt');
+
     console.log();
 
     timeEvent('parsePricingStartedAt');
@@ -266,6 +270,15 @@ async function selectRegion(page: puppeteer.Page, region: string): Promise<void>
 
   await setSelect(page, selector, region);
 }
+
+async function selectmonthly(page: puppeteer.Page, Mpricing: string): Promise<void> {
+  console.log('Selecting monthly:', Mpricing);
+
+  const selector = '#pricing-display-by-dropdown';
+
+  await setSelect(page, selector, Mpricing);
+}
+
 
 function getPricing(): VmPricing[] {
   const pricingRowSelector = '.data-table__table:not([style="visibility: hidden;"]) tbody tr';
