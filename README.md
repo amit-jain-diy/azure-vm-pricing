@@ -1,3 +1,5 @@
+I have changed the pricing from Hour to Month. which is typically used
+
 # Azure VM pricing
 
 Mass-pricing of `VMs` on `Azure` based on `CPU` cores count and memory. This is useful when costing a lift-and-shift migration dealing with many thousands `VMS` of varied sizes.
