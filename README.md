@@ -62,8 +62,8 @@ Retrieve `VMs` **hourly pricing** for a specific combination of **culture**, **c
 
 ### Parser pre-requisites
 
-- `Node.js 12.13.0`
-- `Yarn 1.22.4`
+- `Node.js 12.13.0`  Install by https://nodejs.org/en/download/https://nodejs.org/en/download/`
+- `Yarn 1.22.4` : Install executing in cmd prompt for windows : npm install --global yarn 
 
 ```powershell
 > cd .\parser\
